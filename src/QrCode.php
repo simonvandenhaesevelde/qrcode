@@ -570,7 +570,10 @@ class QrCode
 		}
 
 
-		$this->wordData = array_merge($this->wordData, ...$data);
+        foreach ($data as $array)
+        {
+            $this->wordData = array_merge($this->wordData, $array);
+        }
 	}
 
 	private function makeMatrix()
